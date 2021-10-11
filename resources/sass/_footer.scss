@@ -1,0 +1,64 @@
+//!footer section
+#footer-links{
+    height: 40vh;
+    width: 100%;
+    background: url('../images/footer-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+//!footer col 
+
+h3{
+  font-size: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color:$light-color;
+}
+
+.link-sm{
+    color: $gray-1;
+    font-size: small;
+    cursor: pointer;
+}
+//!logo link
+#logo-link{
+    max-width:30%;
+    height: 100%;
+    background:url('../images/dc-logo-bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: rotate 3s linear  infinite alternate;
+        #logo-link.col-6{
+        align-self: center;
+        }
+}
+
+#socials{
+    height: 10vh;
+    width: 100%;
+    background-color:$dark-secondary-color ;
+ 
+    h3{
+        color: $prime-color;
+        text-transform: uppercase;
+        font-weight: bold;  
+    }
+}
+//!items in social section
+
+
+@keyframes rotate {
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+        rotate: 30deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
