@@ -11381,7 +11381,6 @@ header .list-nav a:active {
   flex-wrap: wrap;
 }
 #gallery .comics .card {
-  flex-basis: 16.6666666667%;
   height: 16.6666666667%;
   text-align: center;
   margin: 1rem;
@@ -11410,6 +11409,62 @@ header .list-nav a:active {
   height: 20vh;
   text-align: center;
   line-height: 20vh;
+}
+
+#section-fill {
+  height: 10vh;
+  background-color: #0282f9;
+}
+
+#preview-section {
+  height: 70vh;
+  background-color: #fff;
+}
+#preview-section h3, #preview-section .h3 {
+  text-align: center;
+  color: #303030;
+}
+#preview-section span {
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-weight: lighter;
+}
+#preview-section .ctrls {
+  height: 50px;
+  background-color: #55ba59;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+#preview-section .ctrls p {
+  margin: 1rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+#preview-section .ctrls .price {
+  flex-basis: 70%;
+  height: 100%;
+  border: 1px solid #303030;
+  border-top: none;
+  border-left: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+#preview-section .ctrls .disp {
+  flex-basis: 30%;
+  height: 100%;
+  border: 1px solid #303030;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: small;
+  text-align: center;
+  cursor: pointer;
+}
+
+h4, .h4 {
+  text-transform: uppercase;
 }
 
 #footer-links {

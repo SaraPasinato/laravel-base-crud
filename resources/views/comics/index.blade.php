@@ -13,8 +13,8 @@
 @section('content-section')   
         <div class="comics">
             @forelse ($comics as $comic)
-            <div class="card bg-dark" >
-                <a href="{{ url("/comics_list/$loop->index") }}">  
+            <div class="card bg-dark col-2" >
+                <a href="{{ route('comics.show',$comic->id) }}">  
                     <img src="{{$comic['thumb']}}" alt="" class="img-fluid">
                     <p class="card-title">{{$comic['title']}}</h5>
                     <p class="card-text"> {{$comic['type']}}</h6>

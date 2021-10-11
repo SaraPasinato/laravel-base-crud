@@ -1,0 +1,65 @@
+#section-fill{
+    height: 10vh;
+    background-color: $prime-color;
+}
+
+#preview-section{
+    height: 70vh;
+    background-color: $light-color;
+
+            h3{
+                text-align: center;
+                color: $dark-secondary-color;
+            }
+           
+           
+
+            span{
+                margin: 1rem 0;
+                text-transform: capitalize;
+                font-weight: lighter;
+            }
+            .ctrls{
+                height: 50px;
+                background-color: $bg-green;
+                margin: 10px 0;    
+                display: flex; 
+                align-items: center;  
+                p{
+                    margin: 1rem 0;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $light-color;
+                }
+              
+
+                .price{
+                    flex-basis: 70%;
+                    height: 100%;
+                    border: 1px solid $dark-secondary-color;
+                    border-top: none;
+                    border-left: none;
+
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                .disp{
+
+                    flex-basis: 30%;
+                    height: 100%;
+                    border: 1px solid $dark-secondary-color;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    font-size: small;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        h4{
+            text-transform: uppercase;
+           
+        }
+
