@@ -1,0 +1,36 @@
+#jumbotron{
+    
+    height: 40vh;
+    background:linear-gradient(transparent,rgba(0, 0, 0, 0.726)),url('../images/jumbotron.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    position: relative;
+    #btn-jumbo{
+        position: absolute;
+        bottom: -30px;
+        left:325px;
+        z-index: 1;
+        
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 1.3em;
+        padding: 10px 20px;
+    }
+
+    img{
+        box-shadow: 2px 2px 40px $dark-color;
+        max-width:10%;
+        position: absolute;
+        bottom: -30px;
+        left:325px;
+        z-index: 1;
+    }
+
+    #blue-section{
+        height: 10vh;
+        background-color: $prime-color;
+        
+    }
+}

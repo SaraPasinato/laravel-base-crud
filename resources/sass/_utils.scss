@@ -4,3 +4,12 @@ li{
       text-decoration: none;
     }
   }
+
+  body{
+    background-color: $dark-gray;
+    font-family: $main-font;
+  }
+
+  #home{
+    min-height: calc(100vh - 60vh);
+  }

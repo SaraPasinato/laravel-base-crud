@@ -1,7 +1,7 @@
 <footer>
     {{-- footer links  --}}
 <section id="footer-links" class="">
-  <div class=" row h-100 align-items-start justify-content-center">
+  <div class=" d-flex h-100 align-items-start justify-content-center">
           <div class="col-7 mt-3">
              <div class="row align-content-center">
                  <div class="col-3">

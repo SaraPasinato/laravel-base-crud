@@ -11,6 +11,13 @@
 <body>
  {{--  creare un includes header  --}}
     @include('includes.header')
+  {{--  >>creare un layout jumbotron  --}}
+  <section id='jumbotron'>
+    <div class="container-sm">
+       @yield('content-jumbotron')
+    </div>
+  </section>
+
   {{--  >>creare un section   --}}
    <main class="container-sm">
     <section id="@yield('section-id')">

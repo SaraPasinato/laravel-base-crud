@@ -11250,6 +11250,15 @@ li a {
   text-decoration: none;
 }
 
+body {
+  background-color: #1c1c1c;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#home {
+  min-height: 40vh;
+}
+
 header {
   background: #fff;
   height: 20vh;
@@ -11322,6 +11331,37 @@ header .list-nav a:active {
   75% {
     color: #8a2be2;
   }
+}
+
+#jumbotron {
+  height: 40vh;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.726)), url("../images/jumbotron.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#jumbotron #btn-jumbo {
+  position: absolute;
+  bottom: -30px;
+  left: 325px;
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1.3em;
+  padding: 10px 20px;
+}
+#jumbotron img {
+  box-shadow: 2px 2px 40px #000;
+  max-width: 10%;
+  position: absolute;
+  bottom: -30px;
+  left: 325px;
+  z-index: 1;
+}
+#jumbotron #blue-section {
+  height: 10vh;
+  background-color: #0282f9;
 }
 
 #footer-links {

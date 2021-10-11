@@ -1,5 +1,5 @@
-<header class="container">
-    <div class="row">
+<header class=" bg-light">
+    <div class="row h-100 container-sm">
         <!-- logo + nav links -->
         <div class="col">
           <img src="{{asset('images/dc-logo.png')}}" alt="logo dc" />
