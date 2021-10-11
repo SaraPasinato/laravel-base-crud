@@ -11258,6 +11258,9 @@ body {
 #home {
   min-height: 40vh;
 }
+#home .welcome {
+  height: 40vh;
+}
 
 header {
   background: #fff;

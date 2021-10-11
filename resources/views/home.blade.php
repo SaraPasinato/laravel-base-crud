@@ -5,8 +5,8 @@
 @section('section-id','home')
 
 @section('content-section')
-<div class="card">
-    <h1>sono home</h1>
+<div class="welcome  text-light d-flex align-items-center justify-content-center">
+    <h1> Benvenuti in MyComics</h1>
 </div>
 
 @endsection
