@@ -13,11 +13,11 @@
 @section('content-section')   
         <div class="comics">
             @forelse ($comics as $comic)
-            <div class="card" >
+            <div class="card bg-dark" >
                 <a href="{{ url("/comics_list/$loop->index") }}">  
-                    <img src="{{$comic['thumb']}}" alt="">
-                    <h5>{{$comic['title']}}</h5>
-                    <h6> {{$comic['type']}}</h6>
+                    <img src="{{$comic['thumb']}}" alt="" class="img-fluid">
+                    <p class="card-title">{{$comic['title']}}</h5>
+                    <p class="card-text"> {{$comic['type']}}</h6>
                 </a>
             </div>
             @empty
