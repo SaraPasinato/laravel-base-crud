@@ -6,7 +6,7 @@
 
 @section('content-jumbotron')
 <div class="container-sm">
-    <p><a id="btn-jumbo" href="#" class="btn btn-primary ">Current Series</a></p>
+    <p><a id="btn-jumbo" href="{{route('comics.create')}}" class="btn btn-primary btn-lg">Insert new Comic</a></p>
 </div>
 @endsection
 

@@ -11255,6 +11255,10 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+#create-form {
+  min-height: 60vh;
+}
+
 #home {
   min-height: 40vh;
 }

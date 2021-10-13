@@ -10,6 +10,10 @@ li{
     font-family: $main-font;
   }
 
+  //!sections id height
+  #create-form{
+    min-height: 60vh;
+  }
   #home{
     min-height: calc(100vh - 60vh);
 
@@ -17,3 +21,5 @@ li{
       height: 40vh;
     }
   }
+
+ 
