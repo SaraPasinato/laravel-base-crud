@@ -44,7 +44,11 @@
                 <label for="type" class="form-label">Type</label>
                 <input type="text" class="form-control" id="type" name="type" value="{{$comic->type}}">
             </div>
-            <input type="submit"  class=" btn w-100 d-block btn-success mx-auto"value="invia">
+            <div class="row h-25 justify-content-between">
+                <input type="submit"  class=" btn w-25  btn-success mx-auto"value="Submit">
+                <input type="reset"  class=" btn w-25  btn-danger mx-auto"value="Reset">
+                <a href="{{url()->previous()}}" class=" btn w-25 d-inline-block  btn-outline-secondary mx-auto">Back</a>
+            </div>
         </form>
     </div>
 @endsection
