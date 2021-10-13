@@ -40,7 +40,7 @@
                 <img src="{{asset('images/adv.jpg')}}" alt="logo adv">
             </div>
             <a class="btn  d-block w-25 btn-secondary me-2" href="{{url()->previous()}}">Indietro</a>
-            <a class="btn  d-block w-25 btn-warning" href="{{url()->previous()}}">Modifica</a>
+            <a class="btn  d-block w-25 btn-warning" href="{{route('comics.edit',$comic->id)}}">Modifica</a>
         </div>
     </div>
  </section>
