@@ -12,6 +12,7 @@
         flex-wrap: wrap;  
 
         .card{
+            position: relative;
             text-align: center;
             margin: 1rem;
             cursor: pointer;  
@@ -33,6 +34,22 @@
 
             a{
                 color: $light-color;
+            }
+
+            #trash{
+                display: none;
+                height: 40px;
+                width: 40px;
+                position: absolute;
+              
+                right:0;
+                bottom: 0;
+
+                z-index: 1;
+            }
+
+            &:hover #trash{
+                display: block;
             }
         }
     }

@@ -4,6 +4,10 @@
 
 @section('section-id','gallery')
 
+@section('cdns')
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' integrity='sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==' crossorigin='anonymous'/>
+@endsection
+
 @section('content-jumbotron')
 <div class="container-sm">
     <p><a id="btn-jumbo" href="{{route('comics.create')}}" class="btn btn-primary btn-lg">Insert new Comic</a></p>
@@ -18,6 +22,13 @@
                     <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid">
                     <p class="card-title">{{$comic->title}}</h5>
                     <p class="card-text"> {{$comic->type}}</h6>
+                    <div id="trash">
+                        <form action="{{route('comics.destroy',$comic->id)}}" method="post" >
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"  class="btn btn-danger text-right"><i class="fas fa-trash"></i></button>                        
+                        </form>
+                    </div>
                 </a>
             </div>
             @empty

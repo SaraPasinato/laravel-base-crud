@@ -11363,6 +11363,7 @@ header a:active {
   flex-wrap: wrap;
 }
 #gallery .comics .card {
+  position: relative;
   text-align: center;
   margin: 1rem;
   cursor: pointer;
@@ -11384,6 +11385,18 @@ header a:active {
 }
 #gallery .comics .card a {
   color: #fff;
+}
+#gallery .comics .card #trash {
+  display: none;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#gallery .comics .card:hover #trash {
+  display: block;
 }
 
 .controls {
