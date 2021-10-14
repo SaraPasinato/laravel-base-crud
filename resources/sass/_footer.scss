@@ -1,6 +1,6 @@
 //!footer section
 #footer-links{
-    height: 40vh;
+    height: 60vh;
     width: 100%;
     background: url('../images/footer-bg.jpg');
     background-position: center;
@@ -24,22 +24,19 @@ h3{
     cursor: pointer;
 }
 //!logo link
-#logo-link{
-    max-width:30%;
-    height: 100%;
-    background:url('../images/dc-logo-bg.png');
-    background-size: contain;
+.logo-link{
+    max-height: 100%;
+    max-width: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     animation: rotate 3s linear  infinite alternate;
-        #logo-link.col-6{
-        align-self: center;
-        }
+        
 }
 
 #socials{
     height: 10vh;
-    width: 100%;
+   
     background-color:$dark-secondary-color ;
  
     h3{

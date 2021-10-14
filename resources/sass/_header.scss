@@ -1,37 +1,8 @@
 header {
     background:$light-color;
-    height: 20vh;
-    .row {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-basis: 100%;
-      align-items: center;
-    }
-    .col img{
-      max-width: 50%;
-    }
-
-    .list-nav{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 5%;
-       
-        a{ 
-                
-            text-decoration: none;
-           
-            margin: 0 20px;
-            
-            color: $dark-secondary-color;
-
-           text-transform: uppercase;
-           font-weight: bold;
-           font-size: 1em;
+    min-height: 10vh;
+        a{
+          text-transform: uppercase;
         }
         a:hover{
             color: $prime-color;
@@ -59,4 +30,4 @@ header {
             }
           }
      }
-  }
+  

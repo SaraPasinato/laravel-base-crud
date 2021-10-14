@@ -19,7 +19,7 @@
   </section>
 
   {{--  >>creare un section   --}}
-   <main class="container-fluid">
+   <main >
     <section id="@yield('section-id')">
         @yield('content-section')
     </section>
