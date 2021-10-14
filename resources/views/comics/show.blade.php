@@ -45,12 +45,12 @@
                     <form action="{{route('comics.destroy',$comic->id)}}" method="post" >
                         @csrf
                         @method('DELETE')
-                        <input type="submit" value="Cancella Definitivamente" class="d-block btn w-50 btn-danger me-2" >
+                        <input type="submit" value=" Permanently Delete " class="d-block btn w-50 btn-danger me-2" >
                     </form>
                 </div>
                     <div class="col-6 d-flex">
-                        <a class="btn  d-block w-25 btn-secondary me-2" href="{{url()->previous()}}">Indietro</a>
-                        <a class="btn  d-block w-25 btn-warning" href="{{route('comics.edit',$comic->id)}}">Modifica</a>
+                        <a class="btn  d-block w-25 btn-secondary me-2" href="{{url()->previous()}}">Back</a>
+                        <a class="btn  d-block w-25 btn-warning" href="{{route('comics.edit',$comic->id)}}">Edit</a>
                     </div>
         
             </div>
