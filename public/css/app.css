@@ -11374,17 +11374,14 @@ header a:active {
   transform: scale(1.3, 1);
   max-width: 75%;
 }
-#gallery .comics .card h5, #gallery .comics .card .h5 {
+#gallery .comics .card p {
   text-transform: uppercase;
   margin-top: 10px;
-}
-#gallery .comics .card h6, #gallery .comics .card .h6 {
-  font-style: italic;
-  font-weight: 200;
-  margin: 10px;
+  font-size: small;
 }
 #gallery .comics .card a {
   color: #fff;
+  text-decoration: none;
 }
 #gallery .comics .card #trash {
   display: none;
@@ -11415,7 +11412,7 @@ header a:active {
 }
 
 #preview-section {
-  height: 70vh;
+  min-height: 100vh;
   background-color: #fff;
 }
 #preview-section h3, #preview-section .h3 {

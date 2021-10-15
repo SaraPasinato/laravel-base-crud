@@ -53,7 +53,7 @@
                         <a class="btn  d-block w-25 btn-warning" href="{{route('comics.edit',$comic->id)}}">Edit</a>
                     </div>
             </div>
-        </div>
+        </div> 
     </div>
  </section>
 @endsection

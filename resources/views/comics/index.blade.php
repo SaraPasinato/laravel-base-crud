@@ -28,8 +28,9 @@
             <div class="card bg-dark col-2" >
                 <a href="{{ route('comics.show',$comic->id) }}">  
                     <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid">
-                    <p class="card-title">{{$comic->title}}</h5>
-                    <p class="card-text"> {{$comic->type}}</h6>
+                    <p class="card-title  fs-6">{{$comic->title}}</p>
+                    <p class="card-text fst-italic text-secondary text-capitalize">{{$comic->series}}</p>
+                    <small class="card-text fw-lighter text-secondary text-lowercase"> {{$comic->type}}</small>
                     <div id="trash">
                         <form action="{{route('comics.destroy',$comic->id)}}" method="post"  class="delete-form" data-comic="{{ $comic->title}}">
                             @csrf

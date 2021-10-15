@@ -1,11 +1,10 @@
 @if ($comic->exists)
 <form action="{{route('comics.update',$comic->id)}}" method="POST">
     @method('PATCH')
- 
-    @else
-    <form action="{{route('comics.store')}}" method="POST">
+ @else
+ <form action="{{route('comics.store')}}" method="POST">
 @endif
-
+    @csrf
     <div class="my-3">
         <label for="title" class="form-label">Title</label>
         <input type="text" class="form-control" id="title" 
@@ -40,7 +39,7 @@
         <input type="text" class="form-control" id="type" name="type" value="{{$comic->type}}">
     </div>
     <div class="row h-25 justify-content-between">
-        <input type="submit"  class=" btn w-25  btn-success mx-auto"value="Submit">
+        <button type="submit"  class=" btn w-25  btn-success mx-auto">{{$comic->id ? 'Edit':'Add'}}</button>
         <input type="reset"  class=" btn w-25  btn-danger mx-auto"value="Reset">
         <a href="{{url()->previous()}}" class=" btn w-25 d-inline-block  btn-outline-secondary mx-auto">Back</a>
     </div>
