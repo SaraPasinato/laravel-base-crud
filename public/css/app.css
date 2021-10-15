@@ -11273,6 +11273,7 @@ header {
 }
 header a {
   text-transform: uppercase;
+  padding: 0 8%;
 }
 header a:hover {
   color: #0282f9;
