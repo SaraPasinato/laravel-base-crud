@@ -1,8 +1,8 @@
 <footer>
     {{-- footer links  --}}
-    <section id="footer-links" class="py-4">
+    <section id="footer-links"  class="pt-sm-2 pt-lg-4">
      <div class="container-sm">
-        <div class="row h-100 justify-content-between align-items-center">
+        <div class="row justify-content-between align-items-center">
                 <div class="col-sm-8">
                     <div class="row h-100 align-content-center">
                         <div class="col-sm-3">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-        <div class="col-sm-4 h-100">
+        <div class="col-sm-4 h-100  w-lg-100">
             <img class="logo-link" src="{{asset('images/dc-logo-bg.png')}}">
         </div>
        </div>

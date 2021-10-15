@@ -11433,6 +11433,7 @@ header a:active {
 #preview-section {
   min-height: 100vh;
   background-color: #fff;
+  padding-top: 10%;
 }
 #preview-section h3, #preview-section .h3 {
   text-align: center;
@@ -11489,6 +11490,9 @@ h4, .h4 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#footer-links .row {
+  min-height: 60vh;
+}
 
 h3, .h3 {
   font-size: normal;
@@ -11505,9 +11509,8 @@ h3, .h3 {
 }
 
 .logo-link {
-  max-height: 100%;
-  max-width: 100%;
-  background-size: cover;
+  max-width: 80%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-animation: rotate 3s linear infinite alternate;

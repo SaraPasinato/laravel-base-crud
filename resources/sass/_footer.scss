@@ -6,7 +6,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    .row{
+        min-height: 60vh;
+      }
 }
 //!footer col 
 
@@ -25,9 +27,8 @@ h3{
 }
 //!logo link
 .logo-link{
-    max-height: 100%;
-    max-width: 100%;
-    background-size: cover;
+    max-width: 80%;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     animation: rotate 3s linear  infinite alternate;

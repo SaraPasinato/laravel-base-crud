@@ -1,6 +1,6 @@
  {{-- footer socials --}}
  <section id="socials" >
-    <div class="container-sm">
+    <div class="container-sm pt-2">
       <div class="d-flex h-100 w-100 justify-content-around align-items-center">
         <div class="col col-sm-6 ">
           <a href="#" class="btn btn-primary">Sign-up now</a>
