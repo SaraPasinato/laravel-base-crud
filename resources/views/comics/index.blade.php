@@ -31,7 +31,7 @@
                     <p class="card-title">{{$comic->title}}</h5>
                     <p class="card-text"> {{$comic->type}}</h6>
                     <div id="trash">
-                        <form action="{{route('comics.destroy',$comic->id)}}" method="post" >
+                        <form action="{{route('comics.destroy',$comic->id)}}" method="post"  class="delete-form" data-comic="{{ $comic->title}}">
                             @csrf
                             @method('DELETE')
                             <button type="submit"  class="btn btn-danger text-right"><i class="fas fa-trash"></i></button>                        
@@ -47,4 +47,9 @@
         <div class="controls">
             <p><a href="#" class="btn btn-primary mx-auto text-uppercase"> Load more</a></p>
         </div>
+@endsection
+
+@section('scripts')
+ <script src="{{asset('js/delete_confirm.js')}}"></script>
+    
 @endsection

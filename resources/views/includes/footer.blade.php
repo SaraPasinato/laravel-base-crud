@@ -51,8 +51,7 @@
                     </div>
                 </div>
         <div class="col-sm-4 h-100">
-            <img class="logo-link"src="{{asset('images/dc-logo-bg.png')}}" >
-            
+            <img class="logo-link" src="{{asset('images/dc-logo-bg.png')}}">
         </div>
        </div>
      </div>
