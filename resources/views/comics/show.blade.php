@@ -14,15 +14,19 @@
 @section('content-section')
     
 {{-- section bg blue --}}
- <div id="section-fill" ></div>
+ <div id="section-fill" >
+     <div class="container-sm text-center py-4 text-uppercase fw-bolder lead">
+         <h1>{{$comic->title}}</h1>
+     </div>
+ </div>
  
  <section id="preview-section"  >
     <div class="container pt-4 ">
         <div class="row justify-content-evenly align-items-center h-50">
             <div class="col-8 h-100 row justify-content-center align-items-center ">
                 <div class="contents ">
-                   <h3>{{ $comic->title}}</h3>
-                    <div class="ctrls">
+              {{--<h3>{{ $comic->title}}</h3>--}}      
+              <div class="ctrls">
                       <div class="price">
                           <p>U.S. Price: <span>{{$comic->price}}</span></p>
                           <p class="opacity">available</p>
