@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
-
+use Illuminate\Validation\Rule;
 
 class ComicController extends Controller
 {
@@ -38,8 +38,15 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $data=$request->all();
         $comic=new Comic();
+        /* //?Validazione */
+        $request->validate([
+            'title'=>['required',Rule::unique('comic')->ignore($comic->id),'max:500'],
+            'description'=>'string|max:1000',
+            'series'=>'string|max:150'
+        ]);
+        $data=$request->all();
+      
 
         $comic->fill($data);
         $comic->save();
@@ -67,6 +74,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
+       
         return view('comics.edit',compact('comic'));
     }
 
@@ -79,6 +87,12 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+          /* //?Validazione */
+          $request->validate([
+            'title'=>['required',Rule::unique('comic')->ignore($comic->id),'max:500'],
+            'description'=>'string|max:1000',
+            'series'=>'string|max:150'
+        ]);
         $data=$request->all();
 
         $comic->update($data);
@@ -122,5 +136,17 @@ class ComicController extends Controller
         return redirect()->route('comics.index')->with('success',$comic->title);
         
     }
-   
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function forceDelete($id)
+    {
+        $comic=Comic::withTrashed()->findOrFail($id);
+        $comic->forceDelete();
+
+        return redirect()->route('comics.trash')->with('delete',$comic->title);
+    }
 }

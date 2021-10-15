@@ -36,7 +36,7 @@
                             @method('PATCH')
                             <button type="submit"  class="btn btn-primary text-right"><i class="fas fa-trash-restore-alt"></i></button>                        
                         </form>
-                        <form action="{{route('comics.destroy',$comic->id)}}" method="post"  class="delete-form" data-comic="{{ $comic->title}}">
+                        <form action="{{route('comics.forceDelete',$comic->id)}}" method="post"  class="delete-form" data-comic="{{ $comic->title}}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit"  class="btn btn-danger text-right"><i class="fas fa-trash"></i></button>                        
@@ -45,8 +45,9 @@
                 </a>
             </div>
             @empty
-                <div class="container-sm text-light mt-4">
+                <div class="container-sm text-light  text-center mt-4">
                     <h1>Non ci sono Fumetti</h1>
+                    <a href="{{url()->previous()}}" class=" btn w-25 d-inline-block  btn-outline-secondary mx-auto">Back</a>
                 </div>
             @endforelse
 
