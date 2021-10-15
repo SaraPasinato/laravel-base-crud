@@ -11392,11 +11392,15 @@ header a:active {
   width: 40px;
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
   z-index: 1;
+}
+#gallery .comics .card:hover img {
+  opacity: 0.6;
 }
 #gallery .comics .card:hover #trash {
   display: block;
+  filter: contrast(200%) opacity(1);
 }
 
 .controls {

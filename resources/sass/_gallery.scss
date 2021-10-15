@@ -40,16 +40,21 @@
                 display: none;
                 height: 40px;
                 width: 40px;
+                
                 position: absolute;
               
                 right:0;
-                bottom: 0;
+                top: 0;
 
                 z-index: 1;
             }
-
+            &:hover img{
+                opacity: 0.60;
+            }
             &:hover #trash{
                 display: block;
+                filter: contrast(200%) opacity(1);
+               
             }
         }
     }
