@@ -9,12 +9,20 @@
 @endsection
 
 @section('content-jumbotron')
-<div class="container-sm">
+<div class="container-sm mb-5">
     <p><a id="btn-jumbo" href="{{route('comics.create')}}" class="btn btn-primary btn-lg">Insert new Comic</a></p>
 </div>
 @endsection
 
 @section('content-section')   
+
+    {{-- passaggio parametro di sessione --}}
+    @if (session('delete'))
+    <div class=" my-5 alert alert-success w-50 mx-auto" role="alert">
+      il film  {{session('delete')}}  è stato eliminato con successo
+      </div>
+    @endif
+
         <div class="comics">
             @forelse ($comics as $comic)
             <div class="card bg-dark col-2" >

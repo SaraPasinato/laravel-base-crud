@@ -11351,7 +11351,7 @@ header a:active {
 
 #gallery {
   height: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 #gallery .comics {
   height: 100%;
@@ -11367,7 +11367,7 @@ header a:active {
   text-align: center;
   margin: 1rem;
   cursor: pointer;
-  box-shadow: 5px 3px 60px rgba(2, 130, 249, 0.3);
+  box-shadow: 5px 3px 100px rgba(2, 130, 249, 0.3);
   border-radius: 5px;
 }
 #gallery .comics .card img {
