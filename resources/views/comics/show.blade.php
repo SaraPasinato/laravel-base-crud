@@ -21,7 +21,7 @@
  </div>
  
  <section id="preview-section"  >
-    <div class="container pt-4 ">
+    <div class="container-sm pt-4 ">
         <div class="row justify-content-evenly align-items-center h-50">
             <div class="col-8 h-100 row justify-content-center align-items-center ">
                 <div class="contents ">

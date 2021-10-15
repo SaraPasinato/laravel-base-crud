@@ -27,7 +27,7 @@
             @forelse ($comics as $comic)
             <div class="card bg-dark col-2" >
                 <a href="{{ route('comics.show',$comic->id) }}">  
-                    <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid">
+                    <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="card-img-top">
                     <p class="card-title  fs-6">{{$comic->title}}</p>
                     <p class="card-text fst-italic text-secondary text-capitalize">{{$comic->series}}</p>
                     <small class="card-text fw-lighter text-secondary text-lowercase"> {{$comic->type}}</small>
