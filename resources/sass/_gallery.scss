@@ -1,3 +1,4 @@
+#comics-trash,
 #gallery{
     height: 100%;
     margin-bottom: 30px;
@@ -33,7 +34,18 @@
                 color: $light-color;
                 text-decoration: none;
             }
+            #revert{
+                
+                height: 40px;
+                width: 40px;
+                
+                position: absolute;
+              
+                left: 58%;
+                top: 0;
 
+                z-index: 1;
+            }
             #trash{
                 display: none;
                 height: 40px;
@@ -49,6 +61,8 @@
             &:hover img{
                 opacity: 0.60;
             }
+
+           
             &:hover #trash{
                 display: block;
                 filter: contrast(200%) opacity(1);

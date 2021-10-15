@@ -98,4 +98,29 @@ class ComicController extends Controller
 
         return redirect()->route('comics.index')->with('delete',$comic->title);
     }
+    /**
+     * View  the resource from trash.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function trash()
+    {
+        $comics=Comic::onlyTrashed()->get();
+        return view('comics.trash',compact('comics'));
+    }
+    /**
+     * View  the resource from trash.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore($id)
+    {
+        $comic=Comic::withTrashed()->find($id);
+        $comic->restore();
+        return redirect()->route('comics.index')->with('success',$comic->title);
+        
+    }
+   
 }

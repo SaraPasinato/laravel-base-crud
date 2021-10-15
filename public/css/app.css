@@ -11349,10 +11349,12 @@ header a:active {
   background-color: #0282f9;
 }
 
+#comics-trash,
 #gallery {
   height: 100%;
   margin-bottom: 30px;
 }
+#comics-trash .comics,
 #gallery .comics {
   height: 100%;
   padding: 80px 0 10px 0;
@@ -11362,6 +11364,7 @@ header a:active {
   align-items: center;
   flex-wrap: wrap;
 }
+#comics-trash .comics .card,
 #gallery .comics .card {
   position: relative;
   text-align: center;
@@ -11370,19 +11373,32 @@ header a:active {
   box-shadow: 5px 3px 100px rgba(2, 130, 249, 0.3);
   border-radius: 5px;
 }
+#comics-trash .comics .card img,
 #gallery .comics .card img {
   transform: scale(1.3, 1);
   max-width: 75%;
 }
+#comics-trash .comics .card p,
 #gallery .comics .card p {
   text-transform: uppercase;
   margin-top: 10px;
   font-size: small;
 }
+#comics-trash .comics .card a,
 #gallery .comics .card a {
   color: #fff;
   text-decoration: none;
 }
+#comics-trash .comics .card #revert,
+#gallery .comics .card #revert {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 58%;
+  top: 0;
+  z-index: 1;
+}
+#comics-trash .comics .card #trash,
 #gallery .comics .card #trash {
   display: none;
   height: 40px;
@@ -11392,9 +11408,11 @@ header a:active {
   top: 0;
   z-index: 1;
 }
+#comics-trash .comics .card:hover img,
 #gallery .comics .card:hover img {
   opacity: 0.6;
 }
+#comics-trash .comics .card:hover #trash,
 #gallery .comics .card:hover #trash {
   display: block;
   filter: contrast(200%) opacity(1);

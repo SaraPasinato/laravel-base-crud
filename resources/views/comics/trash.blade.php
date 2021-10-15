@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
-@section('title','MyComics | COMICS')
+@section('title','MyComics | TRASH')
 
-@section('section-id','gallery')
+@section('section-id','comics-trash')
 
 @section('cdns')
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' integrity='sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==' crossorigin='anonymous'/>
@@ -10,7 +10,6 @@
 
 @section('content-jumbotron')
 <div class="container-sm mb-5">
-    <p><a id="btn-jumbo" href="{{route('comics.create')}}" class="btn btn-primary btn-lg">Insert new Comic</a></p>
 </div>
 @endsection
 
@@ -31,30 +30,30 @@
                     <p class="card-title  fs-6">{{$comic->title}}</p>
                     <p class="card-text fst-italic text-secondary text-capitalize">{{$comic->series}}</p>
                     <small class="card-text fw-lighter text-secondary text-lowercase"> {{$comic->type}}</small>
-                    <div id="trash">
-                        <form action="{{route('comics.destroy',$comic->id)}}" method="post"  class="delete-form" data-comic="{{ $comic->title}}">
+                    <div id="revert" class="d-flex ">
+                        <form action="{{route('comics.restore',$comic->id)}}" method="POST"  class="delete-form me-1" data-comic="{{ $comic->title}}">
                             @csrf
-                            @method('DELETE')
-                            <button type="submit"  class="btn btn-danger text-right"><i class="fas fa-trash"></i></button>                        
+                            @method('PATCH')
+                            <button type="submit"  class="btn btn-primary text-right"><i class="fas fa-trash-restore-alt"></i></button>                        
+                        </form>
+                        <form action="{{route('comics.destroy',$comic->id)}}" method="post"  class="delete-form" data-comic="{{ $comic->title}}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"  class="btn btn-danger text-right"><i class="fas fa-trash"></i></button>                        
                         </form>
                     </div>
                 </a>
             </div>
             @empty
-                <h1>Non ci sono Fumetti</h1>
+                <div class="container-sm text-light mt-4">
+                    <h1>Non ci sono Fumetti</h1>
+                </div>
             @endforelse
 
         </div>
-        <div class="controls">
-            <p>
-                <a href="#" class="btn btn-primary mx-auto text-uppercase me-2 disabled"> Load more</a>
-                <a href="{{route('comics.trash')}}" class="btn btn-warning mx-auto text-uppercase"> Go to Trash</a>
-            </p>
-           
-        </div>
+     
 @endsection
 
 @section('scripts')
  <script src="{{asset('js/delete_confirm.js')}}"></script>
     
-@endsection
